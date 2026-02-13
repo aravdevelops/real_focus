@@ -26,6 +26,14 @@
         margin-left: 50px;
     }
 
+        .box3 {
+      background-color: #813600;
+      padding: 10px;
+      border-radius: 90px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
    .box2 img {
   width: 120px;
   height: auto;
@@ -49,7 +57,7 @@
     <h2 id="points">100</h2>
 
     <button onclick="loseFocus()">I Lost Focus 😵</button>
-  </div>
+
       <div class="box2">
         <h3> Don't you want that 9 SG?</h3>
         <img src="img3.jpg">
@@ -58,19 +66,31 @@
     </div>
   <script>
     let focusPoints = 100;
-
+    let resetCount = 0;
     function loseFocus() {
       focusPoints = focusPoints - 10;
-
       if (focusPoints <= 0) {
-        alert("Points over! Don't be a loser, I'm giving you a second chance!! 💪");
+        alert("Chi, doob mar!😊");
         focusPoints = 100;
+        resetCount = resetCount+1;
+                document.getElementById("resetCount").innerText = resetCount;
+                if(resetCount == 2){
+                  alert("Kya re gandu? Zada masti sujh rahi?");
+                }
+                if(resetCount == 3){
+                  alert("Bhai Chhod hi de tu padhna!!");
+                }
       }
 
       document.getElementById("points").innerText = focusPoints;
     }
   </script>
 
+    </div>
+          <div class="box3">
+        <p>Resets: <span id="resetCount">0</span></p>
+          </div>
+
+
 </body>
 </html>
-
