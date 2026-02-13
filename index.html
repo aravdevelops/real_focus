@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus Tracker</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0e6d6;
+      padding: 100px;
+      text-align: center;
+    }
+
+    .box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .box2 {
+      background-color: #6f4e37;
+      padding: 20px;
+      border-radius: 50px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+   .box2 img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px;
+   }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>Focus Points</h1>
+    <h2 id="points">100</h2>
+
+    <button onclick="loseFocus()">I Lost Focus 😵</button>
+  </div>
+      <div class="box2">
+        <h3> Don't you want that 9 SG?</h3>
+        <img src="img3.jpg">
+        <img src="img7.png">
+        <img src="img2.jpg">
+    </div>
+  <script>
+    let focusPoints = 100;
+
+    function loseFocus() {
+      focusPoints = focusPoints - 10;
+
+      if (focusPoints <= 0) {
+        alert("Points over! Go do 10 pushups 💪");
+        focusPoints = 100;
+      }
+
+      document.getElementById("points").innerText = focusPoints;
+    }
+  </script>
+
+</body>
+</html>
