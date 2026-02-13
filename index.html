@@ -72,14 +72,16 @@
     function loseFocus() {
       focusPoints = focusPoints - 10;
       if (focusPoints <= 0) {
-        alert("Chi, doob mar!😊");
+        alert("Reset Hogaya ji");
         focusPoints = 100;
         resetCount = resetCount+1;
                 document.getElementById("resetCount").innerText = resetCount;
+                if(resetCount==1){
+                   alert("Chi, doob mar!😊");
                 if(resetCount == 2){
                   alert("Kya re gandu? Zada masti sujh rahi?");
                 }
-                if(resetCount == 3){
+                if(resetCount >= 3){
                   alert("Bhai Chhod hi de tu padhna!!");
                 }
       }
@@ -93,4 +95,5 @@
 
 </body>
 </html>
+
 
