@@ -29,6 +29,7 @@
     }
 
         .box3 {
+      color: beige;
       background-color: #813600;
       padding: 10px;
       border-radius: 90px;
@@ -42,12 +43,23 @@
   border-radius: 8px;
   margin: 10px;
    }
-
+.blur img{
+  filter: blur(0.5);
+  transition: 0.5s;
+}
+    .blur img:hover{
+      filter: blur(0)
+    }
     button {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
       margin-top: 20px;
+      transition: 0.8s;
+    }
+    button:hover{
+    background-color: sandybrown;
+      color: brown;
     }
   </style>
 </head>
@@ -64,9 +76,9 @@
 
       <div class="box2">
         <h3> Don't you want that 9 SG?</h3>
-        <img src="img3.jpg">
+        <img src="img3.jpg" class = "blur">
         <img src="img7.png">
-        <img src="img2.jpg">
+        <img src="img2.jpg"  class = "blur">
     </div>
   <script>
     let focusPoints = 100;
@@ -96,6 +108,7 @@
 
 </body>
 </html>
+
 
 
 
