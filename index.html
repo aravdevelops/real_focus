@@ -101,8 +101,11 @@
     }
     let focusPoints = 100;
     let resetCount = 0;
+    let sound = new Audio("faah.mp3");
     function loseFocus() {
       focusPoints = focusPoints - 10;
+      sound.currentTime = 0;
+      sound.play();
       if (focusPoints <= 0) {
         alert("Reset Hogaya ji");
       
@@ -126,6 +129,7 @@
 
 </body>
 </html>
+
 
 
 
