@@ -101,14 +101,16 @@
     }
     let focusPoints = 100;
     let resetCount = 0;
-    let sound = new Audio("faah.mp3");
+    let sound3 = new Audio("sound3.mp3");
+    let sound2 = new Audio("sound2.mp3");
     function loseFocus() {
       focusPoints = focusPoints - 10;
-      sound.currentTime = 0;
-      sound.play();
+      sound3.currentTime = 0;
+      sound3.play();
       if (focusPoints <= 0) {
         alert("Reset Hogaya ji");
-      
+      sound2.currentTime = 0;
+        sound2.play();
         focusPoints = 100;
         resetCount = resetCount+1;
                 document.getElementById("resetCount").innerText = resetCount;
@@ -129,6 +131,7 @@
 
 </body>
 </html>
+
 
 
 
